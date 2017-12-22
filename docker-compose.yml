@@ -1,9 +1,9 @@
 version: '2'
 services:
-    nginx-proxy:
+    imdock-nginx:
       restart: always
       image: nginx
-      container_name: nginx-proxy
+      container_name: imdock-nginx
       volumes:
           - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
           - "./src:/var/www/html"
