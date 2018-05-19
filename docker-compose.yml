@@ -3,12 +3,14 @@ services:
     imdock-nginx:
       restart: always
       image: nginx
+#      image: jboesl/docker-nginx-headers-more
       container_name: imdock-nginx
       volumes:
           - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+          - "./etc/nginx/sites-module:/etc/nginx/sites-module"
           - "./src:/var/www/html"
       ports:
-          - "81:80"
+          - "80:80"
       command: [nginx-debug, '-g', 'daemon off;']
 
 
