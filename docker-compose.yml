@@ -12,6 +12,7 @@ services:
           - "./public_html:/var/www/html"
       ports:
           - "80:80"
+         # - "443:443"
       command: [nginx-debug, '-g', 'daemon off;']
 
 
