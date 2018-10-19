@@ -6,7 +6,7 @@ services:
       image: jboesl/docker-nginx-headers-more
       container_name: imdock-nginx
       volumes:
-           - "./etc/nginx:/etc/nginx/conf.d"
+          - "./etc/nginx:/etc/nginx/conf.d"
          # - "./etc/nginx/80port.conf:/etc/nginx/conf.d/80port.conf"
          # - "./etc/nginx/sites-module:/etc/nginx/sites-module"
           - "./public_html:/var/www/html"
