@@ -1,16 +1,15 @@
-version: '2'
+version: '3.4'
 services:
-    imdock-nginx:
+    web-service:
       restart: always
-#      image: nginx
       image: jboesl/docker-nginx-headers-more
       container_name: imdock-nginx
       volumes:
           - "./config:/etc/nginx/conf.d"
-          - "./public_html:/var/www/html"
+          - "./public_html:/usr/share/nginx/html"
       ports:
           - "80:80"
-         # - "443:443"
+          - "443:443"
       command: [nginx-debug, '-g', 'daemon off;']
 
 
