@@ -2,14 +2,18 @@ version: '3.4'
 services:
     web-service:
       restart: always
-      image: jboesl/docker-nginx-headers-more
+      image: imagine10255/nginx:latest
+      build:
+        context: .
+        args:
+          ENABLED_MODULES: ndk headers-more
       container_name: imdock-nginx
       volumes:
-          - "./config:/etc/nginx/conf.d"
-          - "./public_html:/usr/share/nginx/html"
+          - "./config/nginx/conf.d:/etc/nginx/conf.d"
+          - "./config/nginx/site-modules:/etc/nginx/site-modules"
       ports:
-          - "80:80"
-          - "443:443"
+          - "3000:80"
+          - "8443:443"
       command: [nginx-debug, '-g', 'daemon off;']
 
 

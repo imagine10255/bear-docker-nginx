@@ -1,39 +1,48 @@
 imdock-nginx
 ====================================================
 
-## What's this:
-
-  * you can easy install Nginx Web Service
-
-#### change your custom settting (container_name: {project-name})
-
-    ~/{project-name}/imdock-nginx $ vim ./docker-compose-yml
-    ~/{project-name}/imdock-nginx $ docker-compose up
+Add the module (njs, http_headers_more) to the official method, and provide the basic template out of the box
 
 
-#### setting your custom nginx config (volumes: ./website:/var/www → ../{project-dir}:/var/www)
+## Getting Started
+```bash
+$ git clone https://github.com/imagine10255/imdock-nginx.git site-dev
+$ cd site-dev
 
-    ~/{project-name}/imdock-nginx $ vim ./docker-compose-yml
-    ~/{project-name}/imdock-nginx $ vim ./etc/nginx/default.conf
-    ~/{project-name}/imdock-nginx $ docker-compose up -d
+# Option (first create network)
+$ docker network create --driver bridge imdockgroup
 
+# Starting
+$ docker-compose up
+```
 
-## Reference architecture:
+## Custom Config
+add config to docker-compose.yml
+
+```
+volumes:
+    - "./config/nginx/nginx.conf:/etc/nginx/nginx.conf"
+    - "./config/nginx/site-modules:/etc/nginx/site-modules"
+    - "./config/nginx/conf.d:/etc/nginx/conf.d"
+    - "./public:/etc/nginx/html"
+```
+
+## Reference Architecture:
 
 ```txt
 imdock-nginx
-├── etc/nginx/default.conf   # nginx website setting
-├── src                      # website files
+├── config/nginx
+|           ├── conf.d           # site config
+|           ├── site-module      # site module
+|           |    ├── njs         # site module
+|           |    └── proxy.conf  # site module
+|           └── nginx.conf       # nginx config
+├── public                       # site static files
 └── docker-compose.yml
 ```
 
-## How to and other docker-compose use the same network :
 
-    #if you not have group network, you can create this, and other docker-compose use this network setting
-    ~ $ docker network create --driver bridge imdockgroup
-
-## How to change setting:
-
-  * You just look at this directory you will understand (cnp7/config/*)
-
-  * When the settings are complete, restart the container
+## Ref
+- [use module issue](https://github.com/nginxinc/docker-nginx/issues/511#issuecomment-857555895)
+- [use module step](https://github.com/nginxinc/docker-nginx/tree/master/modules#readme)
+- [njs sample](https://www.gushiciku.cn/pl/gJu3/zh-tw)
