@@ -3,10 +3,6 @@ services:
     web-service:
       restart: always
       image: imagine10255/nginx:latest
-      build:
-        context: .
-        args:
-          ENABLED_MODULES: ndk headers-more
       container_name: imdock-nginx
       volumes:
           - "./config/nginx/conf.d:/etc/nginx/conf.d"

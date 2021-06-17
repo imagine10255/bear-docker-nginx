@@ -3,7 +3,7 @@
 
 FROM nginx:mainline as builder
 
-ARG ENABLED_MODULES
+ARG ENABLED_MODULES="ndk headers-more"
 
 RUN set -ex \
     && if [ "$ENABLED_MODULES" = "" ]; then \
