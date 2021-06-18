@@ -3,17 +3,38 @@ imdock-nginx
 
 Add the module (njs, http_headers_more) to the official method, and provide the basic template out of the box
 
-
 ## Getting Started
 ```bash
 $ git clone https://github.com/imagine10255/imdock-nginx.git site-dev
 $ cd site-dev
+
+# remove git version control
+$ rm -rf ./.git
 
 # Option (first create network)
 $ docker network create --driver bridge imdockgroup
 
 # Starting
 $ docker-compose up
+```
+
+> open test [http://localhost:3000/hello](http://localhost:3000/hello)
+>
+> open test [http://localhost:3000/test.html](http://localhost:3000/test.html)
+
+<img src="./preview.jpg" align="center" height="400"/>
+
+
+## How to use utils
+
+use can be executed directly
+```bash
+$ chmod a+x ./utils.sh
+```
+
+executed
+```bash
+$ utils.sh
 ```
 
 ## Custom Config
@@ -41,6 +62,17 @@ imdock-nginx
 └── docker-compose.yml
 ```
 
+
+## Modify Build
+modify dockerfile
+```bash
+ARG ENABLED_MODULES="ndk headers-more"
+```
+
+run build
+```bash
+$ docker build . imagine10255/imdock-nginx:latest
+```
 
 ## Ref
 - [use module issue](https://github.com/nginxinc/docker-nginx/issues/511#issuecomment-857555895)

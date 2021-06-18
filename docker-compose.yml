@@ -5,11 +5,13 @@ services:
       image: imagine10255/nginx:latest
       container_name: imdock-nginx
       volumes:
-          - "./config/nginx/conf.d:/etc/nginx/conf.d"
-          - "./config/nginx/site-modules:/etc/nginx/site-modules"
+        - "./config/nginx/nginx.conf:/etc/nginx/nginx.conf"
+        - "./config/nginx/site-modules:/etc/nginx/site-modules"
+        - "./config/nginx/conf.d:/etc/nginx/conf.d"
+        - "./public:/etc/nginx/html"
       ports:
-          - "3000:80"
-          - "8443:443"
+        - "3000:80"
+        - "8443:443"
       command: [nginx-debug, '-g', 'daemon off;']
 
 
