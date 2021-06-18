@@ -5,10 +5,8 @@ services:
       image: imagine10255/nginx:latest
       container_name: imdock-nginx
       volumes:
-        - "./config/nginx/nginx.conf:/etc/nginx/nginx.conf"
-        - "./config/nginx/site-modules:/etc/nginx/site-modules"
         - "./config/nginx/conf.d:/etc/nginx/conf.d"
-        - "./public:/etc/nginx/html"
+        - "./config/nginx/site-modules:/etc/nginx/site-modules"
       ports:
         - "3000:80"
         - "8443:443"
