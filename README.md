@@ -22,7 +22,7 @@ $ docker-compose up
 >
 > open test [http://localhost:3000/test.html](http://localhost:3000/test.html)
 
-<img src="./preview.jpg" align="center" height="400"/>
+<img src="./preview.jpg" align="center" height="100"/>
 
 
 ## How to use utils
