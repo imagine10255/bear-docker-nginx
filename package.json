@@ -1,7 +1,7 @@
 {
   "name": "imdock-nginx",
   "description": "Add the module (njs, http_headers_more) to the official method, and provide the basic template out of the box\n\n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "author": "imagine10255@gmail.com",
   "license": "MIT",
