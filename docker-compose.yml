@@ -3,12 +3,11 @@ services:
     web-service:
       restart: always
       image: imagine10255/nginx:latest
-      container_name: imdock-nginx
       volumes:
         - "./config/nginx/conf.d:/etc/nginx/conf.d"
         - "./config/nginx/site-modules:/etc/nginx/site-modules"
       ports:
-        - "3000:80"
+        - "8080:80"
         - "8443:443"
       command: [nginx-debug, '-g', 'daemon off;']
 

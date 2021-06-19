@@ -18,9 +18,9 @@ $ docker network create --driver bridge imdockgroup
 $ docker-compose up
 ```
 
-> open test [http://localhost:3000/hello](http://localhost:3000/hello)
+> open test [http://localhost:8080/hello](http://localhost:3000/hello)
 >
-> open test [http://localhost:3000/test.html](http://localhost:3000/test.html)
+> open test [http://localhost:8080/test.html](http://localhost:3000/test.html)
 
 <img src="./preview.jpg" align="center" height="100"/>
 
