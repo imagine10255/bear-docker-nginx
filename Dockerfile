@@ -77,6 +77,8 @@ RUN echo "alias ll='ls -alF'" >> ~/.bashrc \
     && echo "alias la='ls -A'" >> ~/.bashrc \
     && echo "alias l='ls -CF'" >> ~/.bashrc
 
+RUN mkdir /tmp/nginx/cache -p
+
 ADD ./config/nginx/nginx.conf /etc/nginx/nginx.conf
 ADD ./config/nginx/site-modules /etc/nginx/site-modules
 ADD ./config/nginx/conf.d /etc/nginx/conf.d
