@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/imagine10255/imdock-nginx"
+    "url": "https://github.com/imagine10255/bear-docker-nginx"
   },
   "engines": {
     "npm": ">=6",

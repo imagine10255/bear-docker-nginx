@@ -1,11 +1,11 @@
-imdock-nginx
+bear-docker-nginx
 ====================================================
 
 Add the module (njs, http_headers_more) to the official method, and provide the basic template out of the box
 
 ## Getting Started
 ```bash
-$ git clone https://github.com/imagine10255/imdock-nginx.git site-dev
+$ git clone https://github.com/imagine10255/bear-docker-nginx.git site-dev
 $ cd site-dev
 
 # remove git version control
@@ -51,7 +51,7 @@ volumes:
 ## Reference Architecture:
 
 ```txt
-imdock-nginx
+bear-docker-nginx
 ├── config/nginx
 |           ├── conf.d           # site config
 |           ├── site-module      # site module
@@ -71,7 +71,7 @@ ARG ENABLED_MODULES="ndk headers-more"
 
 run build
 ```bash
-$ docker build . imagine10255/imdock-nginx:latest
+$ docker build . imagine10255/bear-docker-nginx:latest
 ```
 
 ## Ref
