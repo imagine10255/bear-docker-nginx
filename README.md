@@ -42,10 +42,14 @@ add config to docker-compose.yml
 
 ```
 volumes:
+    - "./config/nginx/conf.d:/etc/nginx/conf.d"
+    - "/home/adminuser/service/ftp-server/data:/etc/nginx/html:ro"
+```
+
+```
+# options:
     - "./config/nginx/nginx.conf:/etc/nginx/nginx.conf"
     - "./config/nginx/site-modules:/etc/nginx/site-modules"
-    - "./config/nginx/conf.d:/etc/nginx/conf.d"
-    - "./public:/etc/nginx/html"
 ```
 
 ## Reference Architecture:
@@ -71,7 +75,8 @@ ARG ENABLED_MODULES="ndk headers-more"
 
 run build
 ```bash
-$ docker build . imagine10255/bear-docker-nginx:latest
+$ docker build . -t imagine10255/bear-docker-nginx:latest
+$ docker push imagine10255/bear-docker-nginx:latest
 ```
 
 ## Ref
