@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.8](https://github.com/imagine10255/bear-docker-nginx/compare/v1.0.5...v1.0.8) (2022-04-27)
+
+
+### Features
+
+* 新增 tmp cache, 更改 結構 ([e2022fe](https://github.com/imagine10255/bear-docker-nginx/commit/e2022fe0e0ff596db01b92296fc0d3e3fdaa17a9))
+
 ### [1.0.5](https://github.com/imagine10255/bear-docker-nginx/compare/v1.0.4...v1.0.5) (2022-03-04)
 
 ### [1.0.4](https://github.com/imagine10255/bear-docker-nginx/compare/v1.0.3...v1.0.4) (2022-03-04)
