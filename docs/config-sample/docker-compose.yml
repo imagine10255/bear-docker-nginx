@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+    web-service:
+      restart: always
+      image: imagine10255/bear-docker-nginx:latest
+      volumes:
+          - "./config/nginx/conf.d:/etc/nginx/conf.d"
+      ports:
+          - "9090:80"
+      command: [nginx-debug, '-g', 'daemon off;']
+
+    self-platform:
+      image: gitlab2022.net:25000/frontend/self-platform:latest
+
+
+networks:
+    default:
+        external:
+            name: stage_network
