@@ -75,7 +75,10 @@ ARG ENABLED_MODULES="ndk headers-more"
 
 run build
 ```bash
-$ docker build . -t imagine10255/bear-docker-nginx:latest
+$ docker build . -t imagine10255/bear-docker-nginx:1.0.8
+$ docker push imagine10255/bear-docker-nginx:1.0.8
+
+$ docker tag imagine10255/bear-docker-nginx:1.0.8 imagine10255/bear-docker-nginx:latest
 $ docker push imagine10255/bear-docker-nginx:latest
 ```
 
