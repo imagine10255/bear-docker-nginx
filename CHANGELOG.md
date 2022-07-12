@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/imagine10255/bear-docker-nginx/compare/v1.0.8...v1.0.9) (2022-07-12)
+
+
+### Features
+
+* 更改 發布說明 ([6792177](https://github.com/imagine10255/bear-docker-nginx/commit/6792177e51d21a1f14edfcaf253aa663cc27fa2a))
+
 ### [1.0.8](https://github.com/imagine10255/bear-docker-nginx/compare/v1.0.5...v1.0.8) (2022-04-27)
 
 
